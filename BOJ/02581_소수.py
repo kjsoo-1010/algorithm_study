@@ -9,7 +9,7 @@ for i in range(M, N+1) :
   elif i == 2 :
     odd_check = True
   else :
-    for j in range(2, i) :
+    for j in range(2, int(math.sqrt(i)+1)) :
       odd_check = True
       if i % j == 0 :
         odd_check = False
