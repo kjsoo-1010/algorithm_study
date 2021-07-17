@@ -1,5 +1,26 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
+using namespace std;
+
+int main()
+{   
+    int cnt = 0;
+    while(true) {
+        string s1, s2, w1, w2;
+        cin >> s1 >> s2;
+        if (s1 == "END" && s2 == "END") break;
+        w1 = s1; w2 = s2;
+        cnt++;
+        sort(w1.begin(), w1.end());
+        sort(w2.begin(), w2.end());
+        if (w1 == w2) cout << "Case " << cnt << ": same"<< endl;
+        else cout << "Case " << cnt << ": different"<<endl;
+    }
+}
+/*
+#include <iostream>
+#include <string>
 #include <set>
 using namespace std;
 
@@ -25,3 +46,4 @@ int main() {
 	}
 	return 0;
 }
+*/
