@@ -1,6 +1,7 @@
 line = input().split(' ')
 length = len(line)
 sum = 0
+
 while ('' in line):
     idx = line.index('')
     sum += 1
