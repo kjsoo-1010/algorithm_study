@@ -14,3 +14,4 @@ for i in nums :
         cnt += 1
         break
 print(len(nums)-cnt)
+
