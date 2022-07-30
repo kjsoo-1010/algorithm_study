@@ -3,11 +3,21 @@ def solution(lottos, win_nums):
     lottos = set(lottos)
     win_nums = set(win_nums)
     common = lottos & win_nums
-    answer = [7 - len(common) - zero]
-    if len(common) == 0:
-        answer.append(6)
+    
+    if len(common) < 2:
+        n = 6
+    elif len(common) > 5:
+        n = 1
     else:
-        if zero == 0:
-            answer = [6 - len(common)]
-        answer.append(7-len(common))
+        n = 7 - len(common)
+    
+    if len(common) + zero < 2:
+        nn = 6
+    elif len(common) + zero > 5:
+        nn = 1
+    else:
+        nn = 7 - (len(common) + zero)
+    
+    answer = [nn, n]
+    
     return answer
